@@ -4,20 +4,17 @@ from app.config import db
 from typing import Any
 
 def init_app():
-    db.init()
+    #db.init()
 
     app = FastAPI(title = "FARM stack")
-        #description = "Integration modules"
-        #version = "0.1"
-    #)
 
-    @app.on_event("startup")
-    async def startup():
-        await db.create_all()
+    #@app.on_event("startup")
+    #async def startup():
+    #    await db.create_all()
 
-    @app.on_event("shutdown")
-    async def shutdown():
-        await db.close()
+    #@app.on_event("shutdown")
+    #async def shutdown():
+    #    await db.close()
 
     return app
 
